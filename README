@@ -1,0 +1,12 @@
+Fichier dans l'interface du git en haut à gauche (source control)
+ -> pour commit : stage (le plus) les fichiers qui iront au dépot puis ecrire un msg 
+ de commit (cours de préférence) enfin appuyer sur le bouton commit (coche)
+-> puis vérifier que vous avez la dernière version du porjet : git pull
+-> pousser vos modifications : git push 
+
+!Bonne pratique!: toujours faire un git pull avant push même si on pense que personne n'a rien
+                 fait 
+
+-> si on a un merge : se concerter avec la personne avec qui on est en conflit
+                      choisir de incoming, coming ou both change
+                      puis stage le fichier en conflit puis commit puis pull puis push :)
