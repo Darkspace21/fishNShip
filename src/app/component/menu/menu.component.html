@@ -6,11 +6,12 @@
   </ion-header>
   <ion-content>
     <ion-list>
-      <ion-item>Produits & Promotions</ion-item>
-      <ion-item>Restaurants</ion-item>
-      <ion-item>Recette</ion-item>
-      <ion-item>Bateaux</ion-item>
-      <ion-item>Contact</ion-item>
+      <ion-item [routerLink]="['/home']">Accueil</ion-item>
+      <ion-item [routerLink]="['/produit']">Produits & Promotions</ion-item>
+      <ion-item [routerLink]="['/information']">Restaurants</ion-item>
+      <ion-item [routerLink]="['/information']">Recette</ion-item>
+      <ion-item [routerLink]="['/information']">Bateaux</ion-item>
+      <ion-item [routerLink]="['/contact']">Contact</ion-item>
     </ion-list>
   </ion-content>
 </ion-menu>
