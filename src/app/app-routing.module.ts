@@ -31,10 +31,6 @@ const routes: Routes = [
     path: 'information',
     loadChildren: () => import('./informationFolder/information/information.module').then( m => m.InformationPageModule)
   },
-  {
-    path: 'categorie-information',
-    loadChildren: () => import('./informationFolder/categorie-information/categorie-information.module').then( m => m.CategorieInformationPageModule)
-  },
 ];
 
 @NgModule({
