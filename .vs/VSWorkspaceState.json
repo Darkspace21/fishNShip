@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\informationFolder",
+    "\\src\\app\\produitFolder",
+    "\\src\\app\\produitFolder\\coquillages",
+    "\\src\\assets"
+  ],
+  "SelectedNode": "\\src\\app\\produitFolder\\coquillages\\coquillages.component.scss",
+  "PreviewInSolutionExplorer": false
+}
