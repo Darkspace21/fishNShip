@@ -23,7 +23,7 @@
 }
 
 .ion-content {
-    align-items : end;
+    text-align :center;
 }
 
 #container a {
@@ -32,6 +32,14 @@
 
 .commander-col{
     text-align:center;
+}
+
+.commander-button {
+    position : relative;
+    bottom : 0; 
+    padding : 10px;
+    height : 70px;
+    width : 200px;
 }
 
 
