@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../product.model';
+import { ProductService } from '../produit.service';
+
 import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-categorie-produit',
@@ -6,7 +9,10 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./categorie-produit.page.scss'],
 })
 export class CategorieProduitPage implements OnInit {
+
+  produits:Product[];
   category:string;
+
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
