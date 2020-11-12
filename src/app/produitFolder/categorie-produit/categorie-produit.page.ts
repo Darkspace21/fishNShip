@@ -16,10 +16,6 @@ export class CategorieProduitPage implements OnInit {
   constructor(public productService: ProductService,private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    this.productService.getProduits().subscribe(resp=>{
-      this.produits = resp;
-      console.log(this.produits);
-    });
     this.category = this.activatedRoute.snapshot.paramMap.get('category');
     console.log(this.category);
   }
