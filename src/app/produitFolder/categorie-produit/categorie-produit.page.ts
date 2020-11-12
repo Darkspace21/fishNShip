@@ -13,11 +13,16 @@ export class CategorieProduitPage implements OnInit {
   produits:Product[];
   category:string;
 
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor(private activatedRoute: ActivatedRoute, public productService: ProductService) { }
 
   ngOnInit() {
     this.category = this.activatedRoute.snapshot.paramMap.get('category');
     console.log(this.category);
+
+    this.productService.getProduits().subscribe(resp=>{
+      this.produits = resp;
+      console.log(this.produits);
+    });
   }
 
 }

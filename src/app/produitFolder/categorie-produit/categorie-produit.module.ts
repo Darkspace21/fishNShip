@@ -13,6 +13,7 @@ import { CrustacesComponent } from '../crustaces/crustaces.component';
 import { CoquillagesComponent } from '../coquillages/coquillages.component';
 import { PromotionsComponent } from '../promotions/promotions.component';
 
+
 @NgModule({
   imports: [
     CommonModule,

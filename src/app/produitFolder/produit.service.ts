@@ -8,7 +8,6 @@ import { Product } from './product.model';
 export class ProductService {
 
   constructor(public httpClient: HttpClient) { }
-
   getProduits(){
     return this.httpClient.get<Product[]>("../assets/produit.json");
   }
