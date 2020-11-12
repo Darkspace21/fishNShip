@@ -8,6 +8,9 @@ import { InformationPageRoutingModule } from './information-routing.module';
 
 import { InformationPage } from './information.page';
 import { HeaderComponent } from '../../component/header/header.component';
+import { RecettesComponent } from '../recettes/recettes.component';
+import { RestaurantsComponent } from '../restaurants/restaurants.component';
+import { BateauxComponent } from '../bateaux/bateaux.component';
 
 @NgModule({
   imports: [
@@ -16,6 +19,6 @@ import { HeaderComponent } from '../../component/header/header.component';
     IonicModule,
     InformationPageRoutingModule
   ],
-  declarations: [InformationPage, HeaderComponent]
+  declarations: [InformationPage, HeaderComponent, RecettesComponent, RestaurantsComponent, BateauxComponent]
 })
 export class InformationPageModule {}

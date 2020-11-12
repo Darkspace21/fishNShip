@@ -24,11 +24,11 @@ const routes: Routes = [
     loadChildren: () => import('./produitFolder/produit/produit.module').then( m => m.ProduitPageModule)
   },
   {
-    path: 'categorie-produit',
+    path: 'categorie-produit/:category',
     loadChildren: () => import('./produitFolder/categorie-produit/categorie-produit.module').then( m => m.CategorieProduitPageModule)
   },
   {
-    path: 'information',
+    path: 'information/:category',
     loadChildren: () => import('./informationFolder/information/information.module').then( m => m.InformationPageModule)
   },
 ];

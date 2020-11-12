@@ -1,9 +1,13 @@
 <ion-header>
   <app-header></app-header>
-    <ion-title>information</ion-title>
 </ion-header>
 
 <ion-content>
+  <app-restaurants *ngIf="category==='Restaurants'"></app-restaurants>
+  <app-recettes *ngIf="category==='Recettes'"></app-recettes>
+  <app-bateaux *ngIf="category==='Bateaux'"></app-bateaux>
+
+
   <ion-list>
     <ion-item>
       <ion-select placeholder="Select One">
@@ -15,5 +19,6 @@
   </ion-list>
   <ion-title>titre de l'information</ion-title>
   <img src="../../../assets/Doflamingo_Den_Den_Mushi.jpg">
+  <br/>
   <ion-text>texte de l'information</ion-text>
 </ion-content>
