@@ -3,11 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\informationFolder",
+    "\\src\\app\\component",
+    "\\src\\app\\component\\header",
+    "\\src\\app\\home",
     "\\src\\app\\produitFolder",
-    "\\src\\app\\produitFolder\\coquillages",
+    "\\src\\app\\produitFolder\\categorie-produit",
+    "\\src\\app\\produitFolder\\produit",
     "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\app\\produitFolder\\coquillages\\coquillages.component.scss",
+  "SelectedNode": "\\src\\app\\home\\home.page.html",
   "PreviewInSolutionExplorer": false
 }
