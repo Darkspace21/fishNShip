@@ -1,3 +1,7 @@
+ion-content {
+    --background : url(../../assets/images/BT_Accueil.png) no-repeat center/cover fixed;
+}
+
 #container {
   text-align: center;
 
@@ -30,16 +34,19 @@
   text-decoration: none;
 }
 
-.commander-col{
-    text-align:center;
+.commander-container {
+    text-align: center;
+}
+
+.commander-col {
+    text-align: center;
 }
 
 .commander-button {
-    position : relative;
-    bottom : 0; 
-    padding : 10px;
-    height : 70px;
-    width : 200px;
+    --background: #fe881c;
+    padding: 10px;
+    height: 70px;
+    width: 200px;
 }
 
 
