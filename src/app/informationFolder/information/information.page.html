@@ -1,9 +1,13 @@
 <ion-header>
   <app-header></app-header>
-    <ion-title>information</ion-title>
 </ion-header>
 
 <ion-content>
+  <app-restaurants *ngIf="category==='Restaurants'"></app-restaurants>
+  <app-recettes *ngIf="category==='Recettes'"></app-recettes>
+  <app-bateaux *ngIf="category==='Bateaux'"></app-bateaux>
+
+
   <ion-list>
     <ion-item>
       <ion-select placeholder="Select One">

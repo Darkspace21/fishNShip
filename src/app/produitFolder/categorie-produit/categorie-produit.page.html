@@ -1,9 +1,13 @@
 <ion-header>
     <app-header></app-header>
-    <ion-title>categorieProduit</ion-title>
 </ion-header>
 
 <ion-content>
+  <app-poissons *ngIf="category==='Poissons'"></app-poissons>
+  <app-crustaces *ngIf="category==='Crustacés'"></app-crustaces>
+  <app-coquillages *ngIf="category==='Coquillages'"></app-coquillages>
+  <app-promotions *ngIf="category==='Promotions'"></app-promotions>
+
   <ion-list>
     <ion-item>
       <table>
