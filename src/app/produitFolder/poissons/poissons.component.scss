@@ -28,3 +28,15 @@ p {
   .prix{
     margin-left: 1%;
   }
+
+  ion-footer{
+    height: 30%;
+    background: url(../../../assets/images/BT_Produits.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+  .image{
+    display: flex;
+    width: 100%;
+  }
