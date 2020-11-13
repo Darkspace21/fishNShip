@@ -1,0 +1,30 @@
+ion-content {
+    --background: url(../../assets/images/BT_Panier.png) no-repeat center/cover fixed;
+}
+
+.title {
+    color: white;
+}
+
+.panier-list {
+    border-color : transparent !important;
+    background: transparent !important;
+    padding : 10px;
+    margin-bottom:15px;
+
+    .panier-item {
+        --background: inherit;
+        color : white;
+    }
+}
+
+.price {
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+.valider-button {
+    --background: #fe881c;
+    margin-top: 35px;
+}

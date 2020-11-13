@@ -1,11 +1,11 @@
 <ion-header>
     <app-header></app-header>
-    <ion-title>panier</ion-title>
+    <ion-title class="title">panier</ion-title>
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <ion-item>
+<ion-content fullscreen="true">
+  <ion-list class="panier-list">
+    <ion-item class="panier-item">
       <table>
         <tr>
           <td><ion-label>Nom : </ion-label></td>
@@ -16,7 +16,9 @@
       </table>
     </ion-item>
   </ion-list>
-  <ion-label>Prix Total</ion-label>
-  <br/>
-  <ion-button>Valider</ion-button>
+  <div class="container ion-float-right">
+      <ion-label class="price">Prix Total</ion-label>
+      <br />
+      <ion-button class="valider-button">Valider</ion-button>
+  </div>
 </ion-content>
