@@ -7,8 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BateauxComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    
+  }
 
-  ngOnInit() {}
+  change(Value:object) {
+    console.log(Value);
+  } 
+  
+
+  ngOnInit() {
+    
+  }
 
 }

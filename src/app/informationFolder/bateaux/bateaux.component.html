@@ -1,3 +1,25 @@
-<p>
-  bateaux works!
-</p>
+<ion-list>
+  <ion-item>
+    <ion-select Placeholder="Sélectionner un bateau" [ngModel]="bateau" (ngModelChange)="change(bateau)">
+      <ion-select-option type="bateau" value="bateau1">Corto-Maltesse</ion-select-option>
+      <ion-select-option type="bateau" value="bateau2">Saphir</ion-select-option>
+      <ion-select-option type="bateau" value="bateau3">Brise</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+<br/>
+
+<ion-content>
+  <ion-card class="card-background-page">
+    <img src="../../../assets/images/Saphir.jpg"/>
+    <div class="div-ion-text-information">
+      <ion-text class="ion-text-information">Nos deux bateaux, le Corto-Maltese & le Saphir ainsi que le bateau de Jérome, De La Brise, assurent 70% de nos produits proposés à la livraison, sur Paris et petite couronne. 
+        Nous ne pêchons que des poissons de saison, de manière douce et surtout en garantissant une qualité de poissons irréprochable.</ion-text>
+    </div>
+  </ion-card>
+</ion-content>
+
+
+
+
+
