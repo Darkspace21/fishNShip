@@ -1,8 +1,13 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
-
+@import "fonts";
+:root{
+  --ion-font-family:"Savoye LET",serif !important;
+  font-family: "Savoye LET",serif !important;
+}
 /** Ionic CSS Variables **/
 :root {
+
   /** primary **/
   --ion-color-primary:#05067e;
   --ion-color-primary-rgb: 56, 128, 255;
