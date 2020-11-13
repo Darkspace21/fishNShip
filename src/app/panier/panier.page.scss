@@ -28,3 +28,9 @@ ion-content {
     --background: #fe881c;
     margin-top: 35px;
 }
+
+.ion-no-border {
+    --background: url(../../assets/images/BT_Total.png) no-repeat center fixed;
+    min-height: 10em;
+    background-size: 100% auto;
+}
