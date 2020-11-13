@@ -4,7 +4,10 @@ ion-content {
 
 .title {
     color: white;
+    font-family:'Savoye LET';
 }
+
+
 
 .panier-list {
     border-color : transparent !important;
@@ -26,11 +29,38 @@ ion-content {
 
 .valider-button {
     --background: #fe881c;
-    margin-top: 35px;
+    width: 150px;
 }
 
-.ion-no-border {
-    --background: url(../../assets/images/BT_Total.png) no-repeat center fixed;
-    min-height: 10em;
-    background-size: 100% auto;
+ion-footer {
+    height: 30%;
+    background: url(../../assets/images/BT_Total.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+.total-container {
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+
+.footer-grid {
+    height:100%;
+}
+
+.row-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.total-container {
+    text-align : center;
+}
+
+.site-container {
+    text-align: center;
+}
+

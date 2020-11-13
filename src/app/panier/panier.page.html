@@ -1,6 +1,6 @@
 <ion-header>
     <app-header></app-header>
-    <ion-title class="title">panier</ion-title>
+        <ion-title class="title"><img alt="logo" height="20" src="../../assets/images/BT_Logo.png"/>Le Bateau de Thibault</ion-title>
 </ion-header>
 
 <ion-content fullscreen="true">
@@ -19,13 +19,25 @@
     <div class="container ion-float-right">
         <ion-label class="price">Prix Total</ion-label>
         <br />
-        <ion-button class="valider-button">Valider</ion-button>
+        
     </div>
 </ion-content>
 <ion-footer class="ion-no-border">
-    <ion-toolbar>
-        <div class="total-container">
-        </div>
-    </ion-toolbar>
+        <ion-grid class="footer-grid">
+            <ion-row class="row-container">
+                <ion-col class="ion-align-self-left">
+                    <div class="total-container">
+                        <h2>Total : 50€</h2>
+                        <ion-button class="valider-button">Valider</ion-button>
+                    </div>
+                </ion-col>
+                <ion-col class="ion-align-self-end">
+                    <div class="site-container">
+                        <h3>Point Relais</h3>
+                        <h5>La maison du Poulet</h5>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
 </ion-footer>
 
