@@ -1,3 +1,11 @@
 ion-content {
     --background: url(../../../assets/images/BT_Info.png) no-repeat center/cover fixed;
 }
+
+.ion-card {
+
+    .img {
+        height: 50% !important;
+        width: 100% !important;
+    }
+}
