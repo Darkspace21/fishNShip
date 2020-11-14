@@ -2,21 +2,33 @@
     width: 100%;
     text-align: center;
 }
-.ion-text-title{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
-    font-size: 6vw;
+
+ion-list{
+    width: 80%;
+    margin:auto;
 }
 
 ion-select{
- font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
- font-size: 4vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2vh;
+    font-style: italic;
+    justify-content: center;
 }
+
+ion-select::part(placeholder) {
+    color: #05067e; opacity: 1;
+    border: none;
+} 
+
 
 ion-item{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color:#05067e; 
-    font-size: 4vw; 
+    font-size: 2vh; 
+    --border-color: #05067e; 
+    --ion-background-color:#e4e7f6;
 }
+
 
 .div-information{
     margin: auto;
@@ -31,9 +43,25 @@ ion-item{
     width:100%;
     margin: auto;
     text-align: center;
+    padding: 10px;
+}
+
+.ion-text-title-information{
+    color:#05067e;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    font-size: 3vh;
+    font-style: italic;   
 }
 
 .ion-text-information{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
-    font-size: 4vw;
+    font-size: 2vh;
+    font-style: italic;
+}
+
+ion-card{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
 }
