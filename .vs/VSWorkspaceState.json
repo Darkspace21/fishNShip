@@ -4,13 +4,12 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\component",
-    "\\src\\app\\component\\header",
-    "\\src\\app\\produitFolder",
-    "\\src\\app\\produitFolder\\produit",
-    "\\src\\assets",
-    "\\src\\assets\\images",
-    "\\src\\theme"
+    "\\src\\app\\component\\menu",
+    "\\src\\app\\home",
+    "\\src\\app\\informationFolder",
+    "\\src\\app\\informationFolder\\bateaux",
+    "\\src\\app\\informationFolder\\recettes",
+    "\\src\\app\\informationFolder\\restaurants"
   ],
-  "SelectedNode": "\\src\\app\\home\\home.page.scss",
   "PreviewInSolutionExplorer": false
 }
