@@ -1,42 +1,48 @@
 p {
-    padding-top: 5%;
-    font-size: 25px;
-    line-height: 22px;
-    text-align:center;
-    color: #8c8c8c;
-    font-family: "Savoye LET";
+  padding-top: 5%;
+  font-size: 35px;
+  line-height: 22px;
+  text-align:center;
+  color: blue;
+  font-family: "Savoye LET";
+
+  margin: 0;
+}
+.container{
+  display: flex;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-family:'Trebuchet MS';
+  text-align: center;
   
-    margin: 0;
-  }
-  .container{
-    display: flex;
-    margin-left: 5%;
-    font-family:'Trebuchet MS';
-    
-  }
+}
 
-  .card{
-      width: 100%;
-  }
-  .nom{
-    margin-left: 1%;
-  }
-  .quantite{
-    margin-left: 1%;
-  }
-
-  .prix{
-    margin-left: 1%;
-  }
-
-  ion-footer{
-    height: 30%;
-    background: url(../../../assets/images/BT_Produits.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-
-  }
-  .image{
-    display: flex;
+.card{
     width: 100%;
-  }
+    color:blue;
+}
+.nom{
+  margin-left: 1%;
+}
+.quantite{
+  margin-left: 1%;
+}
+
+.prix{
+  margin-left: 1%;
+  /*text-decoration:line-through blue;*/
+}
+.prix_promotions{
+  color:red;
+}
+
+ion-footer{
+  height: 30%;
+  background: url(../../../assets/images/BT_Produits.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.image{
+  display: flex;
+  width: 100%;
+}

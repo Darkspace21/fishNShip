@@ -1,9 +1,9 @@
 p {
     padding-top: 5%;
-    font-size: 25px;
+    font-size: 35px;
     line-height: 22px;
     text-align:center;
-    color: #8c8c8c;
+    color: blue;
     font-family: "Savoye LET";
   
     margin: 0;
@@ -11,13 +11,16 @@ p {
   .container{
     display: flex;
     margin-left: 5%;
+    margin-right: 5%;
     font-family:'Trebuchet MS';
+    text-align: center;
     
   }
 
   .card{
       width: 100%;
       color:blue;
+      
   }
   .nom{
     margin-left: 1%;
