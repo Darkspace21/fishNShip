@@ -35,3 +35,24 @@
 ion-icon{
     margin-right: 10px;
 }
+
+.img-bateau{
+    width: 20px;
+    margin-right: 8%;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+    .img-bateau{
+        width: 20px;
+        margin-right: 8%;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+    .img-bateau{
+        width: 20px;
+        margin-right: 8%;
+    }
+ }
