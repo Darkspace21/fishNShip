@@ -1,0 +1,77 @@
+ion-content {
+    --background: url(../../assets/images/background_contact.png) no-repeat center/cover fixed;
+}
+
+.div-information{
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 12px;
+    overflow: hidden;   
+}
+
+.div-ion-text-information{
+    width:100%;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.ion-text-title-information{
+    color:#05067e;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    font-size: 3vh;
+    font-style: italic;   
+}
+
+.ion-text-information{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    font-size: 2vh;
+    font-style: italic;
+}
+
+ion-card{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    margin-top:40%;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+    ion-card{
+        margin-top:50%
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+    ion-card{
+        margin-top: 30%;
+        width: 40%;
+        height: 35%;
+    }
+    .logo{
+        margin: 10px;
+    }
+ }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+    ion-card{
+        margin-top: 50%;
+        width: 40%;
+        height: 35%;
+    }
+ }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+    ion-card{
+        margin-top: 50%;
+        width: 40%;
+        height: 35%;
+    }
+ }
