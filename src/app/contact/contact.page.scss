@@ -22,22 +22,29 @@ ion-content {
     color:#05067e;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
     font-size: 3vh;
-    font-style: italic;   
+    font-weight: bold;
 }
 
 .ion-text-information{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
     font-size: 2vh;
-    font-style: italic;
+    
 }
 
 ion-card{
+
     display: flex;
     flex-direction: column;
     width: 50%;
     margin: auto;
     margin-top:40%;
 }
+
+ion-icon{
+    color: var(--ion-color-secondary);
+}
+
+
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) { 
