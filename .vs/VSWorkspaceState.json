@@ -3,13 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\component",
-    "\\src\\app\\component\\menu",
-    "\\src\\app\\home",
     "\\src\\app\\informationFolder",
     "\\src\\app\\informationFolder\\bateaux",
     "\\src\\app\\informationFolder\\recettes",
-    "\\src\\app\\informationFolder\\restaurants"
+    "\\src\\app\\informationFolder\\restaurants",
+    "\\src\\assets",
+    "\\src\\assets\\icon",
+    "\\src\\assets\\images"
   ],
+  "SelectedNode": "\\src\\assets\\icon\\bar-icone.png",
   "PreviewInSolutionExplorer": false
 }
