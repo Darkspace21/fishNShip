@@ -8,3 +8,12 @@
   <app-coquillages *ngIf="category==='Coquillages'"></app-coquillages>
   <app-promotions *ngIf="category==='Promotions'"></app-promotions>
 </ion-content>
+
+<ion-footer>
+  <div class="image">
+  <ion-button class="btn-categorie" [routerLink]="['/categorie-produit', 'Poissons']"><img src="../../../assets/icon/poisson-icone.png"></ion-button>
+  <ion-button class="btn-categorie" [routerLink]="['/categorie-produit', 'Coquillages']"><img src="../../../assets/icon/coquillage-icone.png"></ion-button>
+  <ion-button class="btn-categorie" [routerLink]="['/categorie-produit', 'Crustacés']"><img src="../../../assets/icon/homard-icone.png"></ion-button>
+  <ion-button class="btn-categorie" [routerLink]="['/categorie-produit', 'Promotions']"><img src="../../../assets/icon/promo-icone.png"></ion-button>
+  </div>
+</ion-footer>
