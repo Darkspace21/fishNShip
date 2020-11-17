@@ -10,6 +10,7 @@ export interface IProduct{
     comments?: string,
     owner?: string,
     quantity?: number
+    netPrice?:number,
 }
 
 export class Product implements IProduct {
@@ -24,4 +25,6 @@ export class Product implements IProduct {
     public comments?: string;
     public owner?: string;
     public quantity?: number;
+    public netPrice?:number;
+
 }

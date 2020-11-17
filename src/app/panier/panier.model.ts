@@ -1,3 +1,4 @@
+import { ImplicitReceiver } from '@angular/compiler';
 import { Product } from "../produitFolder/product.model";
 
 export interface IPanier{
@@ -9,10 +10,20 @@ export interface IPanier{
 }
 
 export class Panier implements IPanier{
-    public id:number;
-    public products:Product[];
-    public netPrice: number;
-    public totalPrice:number;
-    public relayPoints: string[];
+    public id?:number;
+    public products?:Product[];
+    public netPrice?: number;
+    public totalPrice?:number;
+    public relayPoints?: string[];
 
+    
+}
+
+
+export interface IItemCart {
+    item?:Product;
+}
+
+export class ItemCart implements IItemCart{
+    public item?:Product;
 }

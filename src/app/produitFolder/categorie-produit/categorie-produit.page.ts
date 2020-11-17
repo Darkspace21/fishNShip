@@ -5,6 +5,7 @@ import { ChangeDetectorRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ValueAccessor } from '@ionic/angular/directives/control-value-accessors/value-accessor';
 import { Storage } from '@ionic/storage';
+import { Panier } from 'src/app/panier/panier.model';
 
 @Component({
   selector: 'app-categorie-produit',
@@ -51,13 +52,41 @@ export class CategorieProduitPage implements OnInit {
     if(value != "Supprimer")
     {
       produit.quantity = parseFloat(value);
+      produit.netPrice = produit.quantity * produit.price;
     }
-    else{
+    else if (value === "Supprimer"){
       produit.quantity = null;
     }
-    this.storage.set("produit", produit)
-    .then(value => alert("Votre commande de " + value.name + " a bien été enregistré!!!"))
-    .catch(err => console.log(err));     
+    // this.storage.set("produit", produit)
+    // .then(value => alert("Votre commande de " + value.name + " a bien été enregistré!!!"))
+    // .catch(err => console.log(err));     
+    let added : boolean = false;
+    this.storage.get("Cart").then((panier:Panier)=>{
+      //Si le panier est vide
+      if(panier === null){
+        panier = new Panier();
+        panier.products = new Array(0);
+        panier.products.push(produit);
+        panier.totalPrice = produit.netPrice;
+      }else{
+        //Si le panier n'est pas vide
+        for(let i = 0; i < panier.products.length; i++){
+          const element: Product = panier.products[i];
+          if(produit.id === element.id){
+            element.quantity = produit.quantity;
+            element.netPrice = produit.quantity * element.price;
+            panier.totalPrice += element.netPrice;
+            added = true;
+          }
+        }
+        if(!added){
+          //le panier n'est pas vide et ne contient pas l'article
+          panier.products.push(produit);
+          panier.totalPrice += produit.netPrice;
+        }
+      }
+      this.storage.set("Cart",panier);
+    })
   }
 
   ngAfterContentChecked() {
