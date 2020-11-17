@@ -6,6 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ValueAccessor } from '@ionic/angular/directives/control-value-accessors/value-accessor';
 import { Storage } from '@ionic/storage';
 import { Panier } from 'src/app/panier/panier.model';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-categorie-produit',
@@ -21,7 +22,7 @@ export class CategorieProduitPage implements OnInit {
 
 
   constructor(private activatedRoute: ActivatedRoute, public productService: ProductService,
-     private cdref: ChangeDetectorRef, public storage: Storage) { 
+     private cdref: ChangeDetectorRef, public storage: Storage, public toaster: ToastController) { 
     this.quantitySelected = ["1","2","3","4","5","6","Supprimer"];
   }
 
@@ -73,6 +74,10 @@ export class CategorieProduitPage implements OnInit {
         for(let i = 0; i < panier.products.length; i++){
           const element: Product = panier.products[i];
           if(produit.id === element.id){
+            if(produit.quantity === null){
+              panier.products.splice(i,1);
+              panier.totalPrice -= produit.netPrice;
+            }
             element.quantity = produit.quantity;
             element.netPrice = produit.quantity * element.price;
             panier.totalPrice += element.netPrice;
@@ -85,8 +90,31 @@ export class CategorieProduitPage implements OnInit {
           panier.totalPrice += produit.netPrice;
         }
       }
-      this.storage.set("Cart",panier);
+      this.storage.set("Cart",panier)
+      .then(panier=>{
+        this.getToster();
+      })
+      .catch(err=>{
+        alert("Erreur" + err);
+      })
     })
+  }
+
+  async getToster(){
+    const toast = await this.toaster.create({
+      message: "Votre panier a été mis à jour",
+      duration:1500,
+      buttons:[
+        {
+          text: 'X',
+          role:'cancel'
+        }
+      ],
+      position:"top",
+      color:"success",
+      cssClass:"text-align:center"  
+    });
+    toast.present();
   }
 
   ngAfterContentChecked() {
