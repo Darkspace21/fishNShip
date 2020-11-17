@@ -12,6 +12,8 @@ export class InformationPage implements OnInit {
 
   informations: Information[];
   category:string;
+  information:Information;
+
   constructor(private activatedRoute: ActivatedRoute,
     public informationService: InformationService) {
 
@@ -21,11 +23,19 @@ export class InformationPage implements OnInit {
     this.category = this.activatedRoute.snapshot.paramMap.get('category');
     console.log(this.category);
 
+    this.getInformations();
+
+  }
+
+  getInformations(){
     this.informationService.getInformations().subscribe(resp=>{
       this.informations = resp;
       console.log(this.informations);
     });
+  }
 
+  sortChange(value:Information){
+    this.information = value;
   }
 
 }

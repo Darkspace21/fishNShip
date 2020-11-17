@@ -9,3 +9,72 @@ ion-content {
         width: 100% !important;
     }
 }
+
+.div-title{
+    width: 100%;
+    text-align: center;
+}
+
+ion-list{
+    width: 80%;
+    margin:auto;
+    padding: 0px;
+}
+
+ion-select{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2vh;
+    font-style: italic;
+    justify-content: center;
+}
+
+ion-select::part(placeholder) {
+    color: #05067e; opacity: 1;
+    border: none;
+} 
+
+
+ion-item{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:#05067e; 
+    font-size: 2vh; 
+    --border-color: #05067e; 
+    --ion-background-color:#e4e7f6;
+}
+
+
+.div-information{
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 12px;
+    overflow: hidden;   
+}
+
+.div-ion-text-information{
+    width:100%;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.ion-text-title-information{
+    color:#05067e;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    font-size: 3vh;
+    font-style: italic;   
+}
+
+.ion-text-information{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    font-size: 2vh;
+    font-style: italic;
+}
+
+ion-card{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+}
