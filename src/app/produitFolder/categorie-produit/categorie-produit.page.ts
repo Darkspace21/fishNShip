@@ -73,21 +73,29 @@ export class CategorieProduitPage implements OnInit {
         //Si le panier n'est pas vide
         for(let i = 0; i < panier.products.length; i++){
           const element: Product = panier.products[i];
+          //si un des elements est égale au panier
           if(produit.id === element.id){
             if(produit.quantity === null){
               panier.products.splice(i,1);
               panier.totalPrice -= produit.netPrice;
-            }
-            element.quantity = produit.quantity;
-            element.netPrice = produit.quantity * element.price;
-            panier.totalPrice += element.netPrice;
-            added = true;
+            }else{
+              //met à jour l'item si il existe deja dans le panier
+              element.quantity = produit.quantity;
+              element.netPrice = produit.quantity * element.price;
+              added = true;
+            }   
           }
         }
         if(!added){
           //le panier n'est pas vide et ne contient pas l'article
-          panier.products.push(produit);
-          panier.totalPrice += produit.netPrice;
+          produit.netPrice = produit.quantity * produit.price
+          panier.products.push(produit); 
+        }
+
+        //quoiqu'il arrive faut refaire le calcul du total
+        panier.totalPrice = 0;
+        for(let i = 0; i < panier.products.length; i++){
+          panier.totalPrice += panier.products[i].netPrice;
         }
       }
       this.storage.set("Cart",panier)
