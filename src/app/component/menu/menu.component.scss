@@ -16,14 +16,20 @@
 
 .menu-list {
     position: absolute;
+    width:100%;
     border-color: transparent !important;
     background: transparent !important;
-    
+
+    .link-container {
+        margin-left: 5%;
+        margin-bottom: 5%;
+    }
+
     .menu-item {
         --background: inherit;
         border-color: transparent !important;
         color: white;
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 
@@ -42,7 +48,7 @@ ion-icon{
 }
 
 .media-container {
-    text-align: right;
+    text-align: end;
     margin-top: 5%;
     font-size: 30px;
 
