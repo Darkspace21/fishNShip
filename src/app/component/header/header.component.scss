@@ -23,9 +23,48 @@
 
 .div_title{
     color:white;
-    font-size: 16px;
+    font-size: 18px;
     font-style:italic;
     font-family:'Savoye LET';
     width: 100%;
     text-align: center;
 }
+
+.img_header{
+    width: 18px;
+}
+
+
+// Small devices (landscape phones, 375px and up)
+@media (min-width: 375px) { 
+    .div_title{
+        font-size: 24px;
+    }
+    
+    .img_header{
+        width: 24px;
+    }
+    
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+    .div_title{
+        font-size: 32px;
+    }
+    
+    .img_header{
+        width: 32px;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+    .div_title{
+        font-size: 40px;
+    }
+    
+    .img_header{
+        width: 40px;
+    }
+ }
