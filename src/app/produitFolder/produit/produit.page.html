@@ -3,21 +3,29 @@
 </ion-header>
 
 <ion-content fullscreen="true">
-    <ion-row>
-        <div class="title-container">
-            <ion-title>Produits & Promotions</ion-title>
-        </div>
-    </ion-row>
-    <ion-col offset-4 class="produit-col">
-        <div>
-            <a class="produit-button" [routerLink]="['/categorie-produit', 'Poissons']" small><img class="image-bg" src="../../../assets/images/bg-bt-poisson.png"/></a>
-            <ion-button class="produit-button" [routerLink]="['/categorie-produit', 'Crustacés']"><img class="image-bg" src="../../../assets/images/bg-bt-crustace.png"></ion-button>
-        </div>
-        <div>
-            <ion-button color="clear" class="produit-button" [routerLink]="['/categorie-produit', 'Coquillages']"><img class="image-bg" src="../../../assets/images/bg-bt-coquillage.png"></ion-button>
-            <ion-button class="produit-button" [routerLink]="['/categorie-produit', 'Promotions']"><img class="image-bg" src="../../../assets/images/bg-bt-promo.png"></ion-button>
-        </div>
-    </ion-col>
+    <ion-grid>
+        <ion-row>
+            <ion-col class="title-container">
+                <p>Fruits de mer et poissons frais au rendez-vous</p>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="ion-align-self-left">
+                <img class="image-bg" src="../../../assets/images/bg-bt-poisson.png" [routerLink]="['/categorie-produit', 'Poissons']" />
+            </ion-col>
+            <ion-col class="ion-align-self-right">
+                <img class="image-bg" src="../../../assets/images/bg-bt-crustace.png" [routerLink]="['/categorie-produit', 'Poissons']">
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="ion-align-self-left">
+                <img class="image-bg" src="../../../assets/images/bg-bt-coquillage.png" [routerLink]="['/categorie-produit', 'Poissons']">
+            </ion-col>
+            <ion-col class="ion-align-self-right">
+                <img class="image-bg" src="../../../assets/images/bg-bt-promo.png" [routerLink]="['/categorie-produit', 'Poissons']">
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>
 <ion-footer class="ion-no-border">
 </ion-footer>

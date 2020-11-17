@@ -3,25 +3,21 @@ ion-content {
 }
 
 .title-container {
-    padding: 10px;
-}
+    width : 100%;
+    color:white;
+    margin : 20px;
+    font-style:italic;
+    font-size:25px;
+    text-align:center;
 
-.produit-col {
-    text-align: center;
-}
-
-.produit-button {
-    text-align: center;
-    padding: 10px;
-    width: 180px;
-    height: 120px;
-
-    .img-bg {
-        width:inherit;
+    .title {
+        align-self:start;
     }
 }
 
-
+.image-bg {
+    border-radius: 30px !important;
+}
 
 ion-footer {
     height: 20%;
