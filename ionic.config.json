@@ -1,5 +1,7 @@
 {
   "name": "fishNShip",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
