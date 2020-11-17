@@ -4,9 +4,13 @@
 
 <ion-content>
   <br/>
+<ion-title>
+  {{category}}
+</ion-title>
+<br/>
 <ion-list>
   <ion-item>
-    <ion-select Placeholder="Sélectionner un bateau" (change)='sortChange(sortSelect.value)'
+    <ion-select Placeholder= "Sélectionner une valeur" (change)='sortChange(sortSelect.value)'
     #sortSelect [ngModel]="sortSelect.value">
       <div *ngFor="let information of informations;index as indexProduit">
       <ion-select-option *ngIf="information.categorie === category" [value]="information">{{information.name}}</ion-select-option>
