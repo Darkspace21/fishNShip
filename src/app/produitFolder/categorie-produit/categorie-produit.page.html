@@ -2,18 +2,28 @@
     <app-header></app-header>
 </ion-header>
 
-<ion-content>
+<ion-content fullscreen="true">
   <app-poissons *ngIf="category==='Poissons'"></app-poissons>
   <app-crustaces *ngIf="category==='Crustacés'"></app-crustaces>
   <app-coquillages *ngIf="category==='Coquillages'"></app-coquillages>
   <app-promotions *ngIf="category==='Promotions'"></app-promotions>
 </ion-content>
 
-<ion-footer>
-  <div class="image">
-  <ion-button class="btn-categorie" [routerLink]="['/categorie-produit', 'Poissons']"><div class="egal1"> <img src="../../../assets/icon/poisson-icone.png"></div></ion-button>
-  <ion-button class="btn-categorie" [routerLink]="['/categorie-produit', 'Coquillages']"><img src="../../../assets/icon/coquillage-icone.png"></ion-button>
-  <ion-button class="btn-categorie" [routerLink]="['/categorie-produit', 'Crustacés']"><div class="egal3"><img src="../../../assets/icon/homard-icone.png"></div></ion-button>
-  <ion-button class="btn-categorie" [routerLink]="['/categorie-produit', 'Promotions']"><div class="egal4"><img src="../../../assets/icon/promo-icone.png"></div></ion-button>
-  </div>
+<ion-footer class="ion-no-border">
+    <ion-grid class="footer-grid">
+        <ion-row class="row-container">
+            <ion-col class="col-container">
+                <img src="../../../assets/icon/poisson-icone.png" class="btn-categorie" [routerLink]="['/categorie-produit', 'Poissons']">
+            </ion-col>
+            <ion-col class="col-container">
+                <img src="../../../assets/icon/coquillage-icone.png" class="btn-categorie" [routerLink]="['/categorie-produit', 'Coquillages']">
+            </ion-col>
+            <ion-col class="col-container">
+                <img src="../../../assets/icon/homard-icone.png" class="btn-categorie" [routerLink]="['/categorie-produit', 'Crustacés']">
+            </ion-col>
+            <ion-col class="col-container">
+                <img src="../../../assets/icon/promo-icone.png" class="btn-categorie" [routerLink]="['/categorie-produit', 'Promotions']">
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-footer>

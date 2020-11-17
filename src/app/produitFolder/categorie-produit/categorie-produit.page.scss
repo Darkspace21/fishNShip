@@ -1,20 +1,33 @@
-.image{
-    //margin-top: 5%;
-    width: 100%;
-    display: flex;
-  }
-  
-  .btn-categorie{
+.ion-content {
+    background: #e4e7f6 !important;
+}
+
+.btn-categorie{
     //padding-top: 1%;
-    width:25%;
-    height: 100px;
+    max-height:60px;
+    background-color: transparent !important;
   }
-  .egal1{
-    width:60%
-  }
-  .egal3{
-    width:80%
-  }
-  .egal4{
-    width:70%
-  }
+
+ion-footer {
+    height: 15%;
+    background: url(../../../assets/images/BT_Produits.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer-grid {
+    height: 100%;
+}
+
+.row-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.col-container {
+    text-align:center;
+    max-height:15%;
+    margin-bottom:10%;
+}
