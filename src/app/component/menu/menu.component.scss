@@ -6,6 +6,10 @@
     text-align:center;
 }
 
+.img_menu{
+    width: 50%;
+}
+
 .list-container {
     position :relative;
 }
@@ -19,11 +23,12 @@
         --background: inherit;
         border-color: transparent !important;
         color: white;
+        font-size: 18px;
     }
 }
 
 .background {
---background:url(../../../assets/images/BT_Menu.png) no-repeat center/cover fixed;
+    --background:url(../../../assets/images/BT_Menu.png) no-repeat center/cover fixed;
 }
 
 ion-icon{
@@ -48,18 +53,15 @@ ion-icon{
 }
 
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { 
-    .img-bateau{
-        width: 20px;
-        margin-right: 8%;
-    }
+// Small devices (landscape phones, 375px and up)
+@media (min-width: 375px) { 
+    .img_menu{
+        width: 60%;
+    }  
 }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { 
-    .img-bateau{
-        width: 20px;
-        margin-right: 8%;
-    }
- }
+@media (min-height: 812px) { 
+    .img_menu{
+        width: 70%;
+    }  
+}
