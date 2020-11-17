@@ -1,6 +1,6 @@
 import { Product } from "../produitFolder/product.model";
 
-export interface IPannier{
+export interface IPanier{
 	id?:number,
 	products?: Product[],
 	netPrice?: number,
@@ -8,7 +8,7 @@ export interface IPannier{
 	relayPoints?: string[]	
 }
 
-export class Pannier implements IPannier{
+export class Panier implements IPanier{
     public id:number;
     public products:Product[];
     public netPrice: number;

@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../product.model';
 import { ProductService } from '../produit.service';
-
+import { ChangeDetectorRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ValueAccessor } from '@ionic/angular/directives/control-value-accessors/value-accessor';
+import { Storage } from '@ionic/storage';
+
 @Component({
   selector: 'app-categorie-produit',
   templateUrl: './categorie-produit.page.html',
@@ -17,7 +19,8 @@ export class CategorieProduitPage implements OnInit {
   quantitySelected:string[];
 
 
-  constructor(private activatedRoute: ActivatedRoute, public productService: ProductService) { 
+  constructor(private activatedRoute: ActivatedRoute, public productService: ProductService,
+     private cdref: ChangeDetectorRef, public storage: Storage) { 
     this.quantitySelected = ["1","2","3","4","5","6","Supprimer"];
   }
 
@@ -40,15 +43,24 @@ export class CategorieProduitPage implements OnInit {
   }
 
   addToCart(produit:Product){
-    console.log(produit);
+    console.log(produit); 
   }
 
   quantityChange(value:string,produit:Product){
     console.log(value,produit);
+    if(value != "Supprimer")
+    {
+      produit.quantity = parseFloat(value);
+    }
+    else{
+      produit.quantity = null;
+    }
+    this.storage.set("produit", produit)
+    .then(value => alert("Votre commande de " + value.name + " a bien été enregistré!!!"))
+    .catch(err => console.log(err));     
   }
 
-  compareFn(e1: string, e2: string): boolean {
-    return e1 && e2 ? e1.id == e2.id : e1 == e2;
+  ngAfterContentChecked() {
+    this.cdref.detectChanges()   
   }
-
 }
