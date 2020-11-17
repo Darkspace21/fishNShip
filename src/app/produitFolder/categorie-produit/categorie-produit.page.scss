@@ -18,3 +18,70 @@
   .egal4{
     width:70%
   }
+
+  //INSIDE
+
+  .background{
+    background-color: #e4e7f6;
+  }
+  ion-title {
+    margin-top:5%;
+    font-size: 35px;
+    text-align:center;
+    color: var(--ion-color-primary); 
+  }
+
+  .container{
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family:'Trebuchet MS';
+    text-align: center;
+    
+  }
+  
+  .card{
+      width: 100%;
+
+  }
+  .nom{
+    margin-left: 1%;
+  }
+  .quantite{
+    margin-left: 1%;
+  }
+  
+  .prix{
+    margin-left: 1%;
+    /*text-decoration:line-through blue;*/
+  }
+  
+  .prix-barrer{
+    margin-left: 1%;
+    color: var(--ion-color-primary); 
+    text-decoration:line-through var(--ion-color-primary);
+  }
+  .prix-promotions{
+    color:red;
+  }
+  
+  img{
+    width: 50%;
+  }
+  
+  .ion-col_img{
+    height: 100px;
+    text-align: center;
+  }
+  
+  .ion-col_texte{
+    height: 75px;  
+    text-align: center;
+    color: var(--ion-color-primary); 
+    font-family:'Trebuchet MS';
+    font-size: 18px;
+  }
+  
+  .img{
+    width: 80px;
+  }
