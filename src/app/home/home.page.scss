@@ -4,7 +4,6 @@ ion-content {
 
 #container {
   text-align: center;
-
   position: absolute;
   left: 0;
   right: 0;
@@ -20,9 +19,7 @@ ion-content {
 #container p {
   font-size: 16px;
   line-height: 22px;
-
   color: #8c8c8c;
-
   margin: 0;
 }
 
@@ -45,8 +42,31 @@ ion-content {
 .commander-button {
     --background: #fe881c;
     padding: 10px;
+    font-size: 18px;
     height: 70px;
-    width: 200px;
+    width: 70%;
 }
 
+
+// Small devices (landscape phones, 375px and up)
+@media (min-width: 375px) { 
+    .commander-button {
+      font-size: 24px;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+    .commander-button {
+      font-size: 32px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+    .commander-button {
+      font-size: 40px;
+      height: 92px;
+  }
+}
 
