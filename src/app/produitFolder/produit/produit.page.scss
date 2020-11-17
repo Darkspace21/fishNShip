@@ -1,3 +1,7 @@
+ion-content {
+    --background: url(../../../assets/images/BT_Categorie.png) no-repeat center/cover fixed;
+}
+
 .title-container {
     padding: 10px;
 }
@@ -7,9 +11,15 @@
 }
 
 .produit-button {
-    text-align:center;
+    text-align: center;
     padding: 10px;
     width: 180px;
-    height : 120px;
-    --border-radius: 30px;
+    height: 120px;
+}
+
+ion-footer {
+    height: 20%;
+    background: url(../../../assets/images/BT_Categorie-FT.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
