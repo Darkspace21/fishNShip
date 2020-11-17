@@ -14,8 +14,12 @@ export class CategorieProduitPage implements OnInit {
   produits:Product[];
   category:string;
   numberCategory:number;
+  quantitySelected:string[];
 
-  constructor(private activatedRoute: ActivatedRoute, public productService: ProductService) { }
+
+  constructor(private activatedRoute: ActivatedRoute, public productService: ProductService) { 
+    this.quantitySelected = ["1","2","3","4","5","6","Supprimer"];
+  }
 
   ngOnInit() {
     this.category = this.activatedRoute.snapshot.paramMap.get('category');
@@ -37,6 +41,14 @@ export class CategorieProduitPage implements OnInit {
 
   addToCart(produit:Product){
     console.log(produit);
+  }
+
+  quantityChange(value:string,produit:Product){
+    console.log(value,produit);
+  }
+
+  compareFn(e1: string, e2: string): boolean {
+    return e1 && e2 ? e1.id == e2.id : e1 == e2;
   }
 
 }
