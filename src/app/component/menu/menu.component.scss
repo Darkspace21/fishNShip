@@ -14,12 +14,6 @@
     position: absolute;
     border-color: transparent !important;
     background: transparent !important;
-
-    .list-title {
-        color:white;
-        font-style:italic;
-        margin-bottom:10px;
-    }
     
     .menu-item {
         --background: inherit;
@@ -34,6 +28,7 @@
 
 ion-icon{
     margin-right: 10px;
+    color : white;
 }
 
 .img-bateau{
@@ -41,9 +36,17 @@ ion-icon{
     margin-right: 8%;
 }
 
-.logo-facebook {
-    bottom: 0;
+.media-container {
+    text-align: right;
+    margin-top: 5%;
+    font-size: 30px;
+
+    .fb-button {
+        background-color: transparent !important;
+        font-size: 30px;
+    }
 }
+
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) { 
