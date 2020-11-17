@@ -2,20 +2,31 @@
   <app-header></app-header>
 </ion-header>
 
-<ion-content>
-    <div class="title-container">
-        <ion-title>Produits & Promotions</ion-title>
-    </div>
-
-    <ion-col offset-4 class="produit-col">
-        <div>
-            <ion-button class="produit-button" [routerLink]="['/categorie-produit', 'Poissons']">Poissons</ion-button>
-            <ion-button class="produit-button" [routerLink]="['/categorie-produit', 'Crustacés']">Crustacés</ion-button>
-        </div>
-        <div>
-            <ion-button class="produit-button" [routerLink]="['/categorie-produit', 'Coquillages']">Coquillages</ion-button>
-            <ion-button class="produit-button" [routerLink]="['/categorie-produit', 'Promotions']">Promotions</ion-button>
-        </div>
-    </ion-col>
+<ion-content fullscreen="true">
+    <ion-grid>
+        <ion-row>
+            <ion-col class="title-container">
+                <p>Fruits de mer et poissons frais au rendez-vous</p>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="ion-align-self-left">
+                <img class="image-bg" src="../../../assets/images/bg-bt-poisson.png" [routerLink]="['/categorie-produit', 'Poissons']" />
+            </ion-col>
+            <ion-col class="ion-align-self-right">
+                <img class="image-bg" src="../../../assets/images/bg-bt-crustace.png" [routerLink]="['/categorie-produit', 'Poissons']">
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="ion-align-self-left">
+                <img class="image-bg" src="../../../assets/images/bg-bt-coquillage.png" [routerLink]="['/categorie-produit', 'Poissons']">
+            </ion-col>
+            <ion-col class="ion-align-self-right">
+                <img class="image-bg" src="../../../assets/images/bg-bt-promo.png" [routerLink]="['/categorie-produit', 'Poissons']">
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>
+<ion-footer class="ion-no-border">
+</ion-footer>
 
