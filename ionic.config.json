@@ -1,7 +1,8 @@
 {
   "name": "fishNShip",
   "integrations": {
-    "cordova": {}
+    "cordova": {},
+    "capacitor": {}
   },
   "type": "angular"
 }

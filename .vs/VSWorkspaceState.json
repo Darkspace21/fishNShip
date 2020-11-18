@@ -3,14 +3,8 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\component",
-    "\\src\\app\\component\\menu",
-    "\\src\\app\\produitFolder",
-    "\\src\\app\\produitFolder\\poissons",
-    "\\src\\app\\produitFolder\\produit",
-    "\\src\\app\\produitFolder\\promotions",
     "\\src\\theme"
   ],
-  "SelectedNode": "\\src\\app\\component\\menu\\menu.component.scss",
+  "SelectedNode": "\\src\\app\\app.module.ts",
   "PreviewInSolutionExplorer": false
 }
