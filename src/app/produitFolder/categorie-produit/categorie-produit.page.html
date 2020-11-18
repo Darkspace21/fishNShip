@@ -29,7 +29,7 @@
     <ion-row>
       <ion-col *ngIf="produit.category === numberCategory">
 
-        <ion-grid *ngIf="!produit.quantity" >
+        <ion-grid class="ion-grid_produit" *ngIf="!produit.quantity" >
           <ion-row>
             <ion-col class="ion-col_img">
               <img (click)="addToCart(produit)" class="img" src="../../../assets/icon/{{ produit.image }}">
@@ -47,7 +47,7 @@
           </ion-row>
         </ion-grid>
 
-        <ion-grid style="border:3px solid springgreen;border-radius: 12px;" *ngIf="produit.quantity && produit.quantity > 0" >
+        <ion-grid class="ion-grid_produit" style="background-image:linear-gradient(#4364F7, #6FB1FC);border-radius:12px;" *ngIf="produit.quantity && produit.quantity > 0" >
           <ion-row>
             <ion-col class="ion-col_img">
               <img (click)="addToCart(produit)" class="img" src="../../../assets/icon/{{ produit.image }}">
@@ -56,7 +56,7 @@
           <ion-row>
             <ion-col class="ion-col_texte">
               <div class="nom"><b>{{produit.name}}</b></div>
-              <div class="quantite" *ngIf="produit.quantity">{{produit.quantity}}</div>
+              <div class="quantite" *ngIf="produit.quantity">quantite: {{produit.quantity}}</div>
               <div class="prix">{{produit.price}}€/{{produit.unit}}</div>
               <ion-select #quantitySelect [ngModel]="quantitySelect.value" (ionChange)='quantityChange(quantitySelect.value,produit)' Placeholder="Sélectionner une quantité" interface="action-sheet">
                 <ion-select-option *ngFor="let quantity of quantitySelected;" [value]="quantity">{{ quantity }}</ion-select-option>
@@ -67,7 +67,7 @@
         
       </ion-col>
       <ion-col *ngIf="produit.discount && category==='Promotions'">
-        <ion-grid>
+        <ion-grid class="ion-grid_promotion" *ngIf="!produit.quantity">
           <ion-row>
             <ion-col class="ion-col_img">
               <img class="img" src="../../../assets/icon/{{ produit.image }}">
@@ -76,7 +76,7 @@
           <ion-row>
             <ion-col class="ion-col_texte">
               <div class="nom"><b>{{produit.name}}</b></div>
-              <div class="quantite" *ngIf="produit.quantity">{{produit.quantite}}</div>
+              <div class="quantite" *ngIf="produit.quantity">{{produit.quantity}}</div>
               <div class="prix-barrer">{{produit.price}}€/{{produit.unit}}</div>
               <div class="prix-promotions">{{produit.discount}}€/{{produit.unit}}</div>
               <ion-select #quantitySelect [ngModel]="quantitySelect.value" (ionChange)='quantityChange(quantitySelect.value,produit)' Placeholder="Sélectionner une quantité" interface="action-sheet">
@@ -85,6 +85,25 @@
             </ion-col>
           </ion-row>
         </ion-grid>
+
+        <ion-grid class="ion-grid_promotion" style="background-color: #107cff;border-radius:12px;" *ngIf="produit.quantity && produit.quantity > 0" >
+          <ion-row>
+            <ion-col class="ion-col_img">
+              <img class="img" src="../../../assets/icon/{{ produit.image }}">
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="ion-col_texte">
+              <div class="nom"><b>{{produit.name}}</b></div>
+              <div class="quantite" *ngIf="produit.quantity">quantite: {{produit.quantity}}</div>
+              <div class="prix-barrer">{{produit.price}}€/{{produit.unit}}</div>
+              <div class="prix-promotions">{{produit.discount}}€/{{produit.unit}}</div>
+              <ion-select #quantitySelect [ngModel]="quantitySelect.value" (ionChange)='quantityChange(quantitySelect.value,produit)' Placeholder="Sélectionner une quantité" interface="action-sheet">
+                <ion-select-option *ngFor="let quantity of quantitySelected;" [value]="quantity">{{ quantity }}</ion-select-option>
+              </ion-select>            
+            </ion-col>
+          </ion-row>
+        </ion-grid>        
       </ion-col>
     </ion-row>
     </div>

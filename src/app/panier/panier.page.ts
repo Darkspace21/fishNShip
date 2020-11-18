@@ -14,7 +14,7 @@ export class PanierPage {
   panier: Panier;
   quantitySelected:string[];
   constructor(public storage: Storage, public toaster: ToastController,private cdref: ChangeDetectorRef) { 
-    this.quantitySelected = ["1","2","3","4","5","6","Supprimer"];
+    this.quantitySelected = ["1","2","3","4","5","6","Retirer du panier"];
   }
 
   ionViewWillEnter() {
@@ -29,12 +29,12 @@ export class PanierPage {
   }
 
   quantityChange(value:string,produit:Product){
-    if(value != "Supprimer")
+    if(value != "Retirer du panier")
     {
       produit.quantity = parseFloat(value);
       produit.netPrice = produit.quantity * produit.price;
     }
-    else if (value === "Supprimer"){
+    else if (value === "Retirer du panier"){
       produit.quantity = null;
     } 
     let added : boolean = false;
