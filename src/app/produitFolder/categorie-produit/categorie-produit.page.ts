@@ -137,7 +137,7 @@ export class CategorieProduitPage implements OnInit {
         }
       ],
       position:"top",
-      color:"success",
+      color:"tertiary",
       cssClass:"text-align:center"  
     });
     toast.present();
