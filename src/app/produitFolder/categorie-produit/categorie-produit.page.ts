@@ -30,13 +30,8 @@ export class CategorieProduitPage implements OnInit {
     this.category = this.activatedRoute.snapshot.paramMap.get('category');
     console.log(this.category);
 
-    if(!this.produits){
-      this.productService.getProduits().subscribe(resp=>{
-        this.produits = resp;
-        console.log(this.produits);
-      });
-  
-    }
+    this.getProduits();
+    
 
     if(this.category && this.category!='Promotions'){
       this.numberCategory = parseFloat(this.category);
@@ -46,8 +41,43 @@ export class CategorieProduitPage implements OnInit {
 
   // async ionViewWillEnter() {
   //   console.log("CartPage");
-  //   await
+  //   await this.storage.get("Cart").then((data: Panier)=>{
+  //     for(let i = 0; i < this.produits.length;i++){
+  //       for(let j = 0; j < data.products.length;j++){
+  //         if(this.produits[i].id === data.products[j].id){
+  //           this.produits[i].quantity = data.products[j].quantity;
+  //         }
+  //       }
+  //     }
+  //   })
+  //   .catch(err=>{
+  //     console.log("Erreur",err);
+  //   }) 
   // }
+
+  getProduits(){
+    if(!this.produits){
+      this.productService.getProduits().subscribe(resp=>{
+        this.produits = resp;
+        this.storage.get("Cart").then((data: Panier)=>{
+        //  if(data!=null)
+        for(let i = 0; i < this.produits.length;i++){
+          for(let j = 0; j < data.products.length;j++){
+            if(this.produits[i].id === data.products[j].id){
+              this.produits[i].quantity = data.products[j].quantity;
+              console.log(this.produits[i].quantity,"quantite");
+            }
+          }
+        }
+      })
+      .catch(err=>{
+        console.log("Erreur",err);
+      }) 
+        console.log(this.produits);
+      });
+  
+    }
+  }
 
   addToCart(produit:Product){
     console.log(produit); 
@@ -149,6 +179,7 @@ export class CategorieProduitPage implements OnInit {
   }
 
   ngAfterContentChecked() {
-    this.cdref.detectChanges()   
+    this.getProduits();
+    this.cdref.detectChanges();
   }
 }
