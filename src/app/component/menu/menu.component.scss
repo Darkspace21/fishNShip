@@ -19,6 +19,7 @@
     width:100%;
     border-color: transparent !important;
     background: transparent !important;
+    margin-top: 25%;
 
     .link-container {
         margin-left: 5%;
@@ -42,6 +43,7 @@ ion-icon{
     color : white;
 }
 
+
 .img-bateau{
     width: 20px;
     margin-right: 8%;
@@ -62,8 +64,9 @@ ion-icon{
 // Small devices (landscape phones, 375px and up)
 @media (min-width: 375px) { 
     .img_menu{
-        width: 60%;
+        width: 50%;
     }  
+
 }
 
 @media (min-height: 812px) { 

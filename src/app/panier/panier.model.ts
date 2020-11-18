@@ -6,7 +6,8 @@ export interface IPanier{
 	products?: Product[],
 	netPrice?: number,
 	totalPrice?: number,
-	relayPoints?: string[]	
+    relayPoints?: string[]	
+    relaySelected?: string;
 }
 
 export class Panier implements IPanier{
@@ -15,6 +16,7 @@ export class Panier implements IPanier{
     public netPrice?: number;
     public totalPrice?:number;
     public relayPoints?: string[];
+    public relaySeleted?: string;
 
     
 }
