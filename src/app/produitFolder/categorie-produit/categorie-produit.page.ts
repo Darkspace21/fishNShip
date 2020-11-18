@@ -44,6 +44,11 @@ export class CategorieProduitPage implements OnInit {
 
   }
 
+  // async ionViewWillEnter() {
+  //   console.log("CartPage");
+  //   await
+  // }
+
   addToCart(produit:Product){
     console.log(produit); 
     this.getCommentToster(produit);
@@ -58,10 +63,7 @@ export class CategorieProduitPage implements OnInit {
     }
     else if (value === "Supprimer"){
       produit.quantity = null;
-    }
-    // this.storage.set("produit", produit)
-    // .then(value => alert("Votre commande de " + value.name + " a bien été enregistré!!!"))
-    // .catch(err => console.log(err));     
+    } 
     let added : boolean = false;
     this.storage.get("Cart").then((panier:Panier)=>{
       //Si le panier est vide
@@ -78,8 +80,10 @@ export class CategorieProduitPage implements OnInit {
           if(produit.id === element.id){
             //retire le produit si la quantité est nulle  
             if(produit.quantity === null){
-              panier.products.splice(i,1);
               panier.totalPrice -= produit.netPrice;
+              panier.products.splice(i,1);
+              added=true;
+              console.log("panier dans splice",panier);
             }else{
               //met à jour l'item si il existe deja dans le panier
               element.quantity = produit.quantity;

@@ -5,19 +5,24 @@
 <ion-content fullscreen="true">
     <ion-list class="panier-list" *ngIf="panier">
         <ion-item class="panier-item" *ngFor="let item of panier.products;">
-            <ion-card (click)="quantityChange(item)" class="card-container">
+            <ion-card class="card-container" *ngIf="item.quantity">
                 <ion-grid class="card-grid">
                     <ion-row class="card-row">
                         <ion-col class="ion-align-self-left">
                             <div class="col-container">
                                 <h3>{{ item.name }}</h3>
-                                <p>Quantité : {{ item.quantity }}</p>
+                                <!-- <p>Quantité : {{ item.quantity }}</p> -->
+                                <ion-label>Quantité: </ion-label>
+                                <ion-select #quantitySelect [ngModel]="quantitySelect.value" (ionChange)='quantityChange(quantitySelect.value,item)' 
+                                Placeholder="Sélectionner une quantité" interface="action-sheet">
+                                    <ion-select-option *ngFor="let quantity of quantitySelected;" [value]="quantity">{{ quantity }}</ion-select-option>
+                                  </ion-select>
                             </div>
                         </ion-col>
                         <ion-col class="ion-align-self-right">
                             <div class="col-container">
-                                <h3>{{ item.netPrice }}</h3>
-                                <p>{{ item.price }}/unité</p>
+                                <h3>{{ item.netPrice }}€</h3>
+                                <p>{{ item.price }}€/{{item.unit}}</p>
                             </div>
                         </ion-col>
                     </ion-row>

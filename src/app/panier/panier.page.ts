@@ -1,5 +1,5 @@
 import { ThrowStmt } from '@angular/compiler';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Panier } from './panier.model';
 import { Storage } from '@ionic/storage';
 import { ToastController } from '@ionic/angular';
@@ -12,7 +12,10 @@ import { Product } from '../produitFolder/product.model';
 })
 export class PanierPage {
   panier: Panier;
-  constructor(public storage: Storage, public toaster: ToastController) { }
+  quantitySelected:string[];
+  constructor(public storage: Storage, public toaster: ToastController,private cdref: ChangeDetectorRef) { 
+    this.quantitySelected = ["1","2","3","4","5","6","Supprimer"];
+  }
 
   ionViewWillEnter() {
     console.log("CartPage");
@@ -55,8 +58,9 @@ export class PanierPage {
           if(produit.id === element.id){
             //retire le produit si la quantité est nulle  
             if(produit.quantity === null){
-              panier.products.splice(i,1);
               panier.totalPrice -= produit.netPrice;
+              panier.products.splice(i,1);
+              added = true;
             }else{
               //met à jour l'item si il existe deja dans le panier
               element.quantity = produit.quantity;
@@ -102,6 +106,10 @@ export class PanierPage {
       cssClass:"text-align:center"  
     });
     toast.present();
+  }
+
+  ngAfterContentChecked() {
+    this.cdref.detectChanges()   
   }
 
 }
