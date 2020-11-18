@@ -7,18 +7,20 @@
   <app-crustaces *ngIf="category===1"></app-crustaces>
   <app-coquillages *ngIf="category===2"></app-coquillages>
   <app-promotions *ngIf="category==='Promotions'"></app-promotions> -->
-  <ion-title *ngIf="category === '0'">
-    Poissons
-  </ion-title>
-  <ion-title *ngIf="category === '1'">
-    Crustacés
-  </ion-title>
-  <ion-title *ngIf="category === '2'">
-    Coquillages
-  </ion-title>
-  <ion-title *ngIf="category === 'Promotions'">
-    {{category}}
-  </ion-title>
+  <div class="div_title">
+    <ion-text class="title" *ngIf="category === '0'">
+      Poissons
+    </ion-text>
+    <ion-text class="title" *ngIf="category === '1'">
+      Crustacés
+    </ion-text>
+    <ion-text class="title" *ngIf="category === '2'">
+      Coquillages
+    </ion-text>
+    <ion-text class="title" *ngIf="category === 'Promotions'">
+      {{category}}
+    </ion-text>
+  </div>
 
   <br/>
 
