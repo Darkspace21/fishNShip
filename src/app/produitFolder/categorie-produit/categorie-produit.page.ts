@@ -75,6 +75,7 @@ export class CategorieProduitPage implements OnInit {
           const element: Product = panier.products[i];
           //si un des elements est égale au panier
           if(produit.id === element.id){
+            //retire le produit si la quantité est nulle  
             if(produit.quantity === null){
               panier.products.splice(i,1);
               panier.totalPrice -= produit.netPrice;

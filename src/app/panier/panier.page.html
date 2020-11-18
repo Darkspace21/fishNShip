@@ -3,41 +3,21 @@
 </ion-header>
 
 <ion-content fullscreen="true">
-    <ion-list class="panier-list">
-        <ion-item class="panier-item">
-            <ion-card class="card-container">
+    <ion-list class="panier-list" *ngIf="panier">
+        <ion-item class="panier-item" *ngFor="let item of panier.products;">
+            <ion-card (click)="quantityChange(item)" class="card-container">
                 <ion-grid class="card-grid">
                     <ion-row class="card-row">
                         <ion-col class="ion-align-self-left">
                             <div class="col-container">
-                                <h3>Thon</h3>
-                                <p>Quantité : 2</p>
+                                <h3>{{ item.name }}</h3>
+                                <p>Quantité : {{ item.quantity }}</p>
                             </div>
                         </ion-col>
                         <ion-col class="ion-align-self-right">
                             <div class="col-container">
-                                <h3>5€</h3>
-                                <p>2.50/unité</p>
-                            </div>
-                        </ion-col>
-                    </ion-row>
-                </ion-grid>
-            </ion-card>
-        </ion-item>
-        <ion-item class="panier-item">
-            <ion-card class="card-container">
-                <ion-grid class="card-grid">
-                    <ion-row class="card-row">
-                        <ion-col class="ion-align-self-left">
-                            <div class="col-container">
-                                <h3>Thon</h3>
-                                <p>Quantité : 2</p>
-                            </div>
-                        </ion-col>
-                        <ion-col class="ion-align-self-right">
-                            <div class="col-container">
-                                <h3>5€</h3>
-                                <p>2.50/unité</p>
+                                <h3>{{ item.netPrice }}</h3>
+                                <p>{{ item.price }}/unité</p>
                             </div>
                         </ion-col>
                     </ion-row>
@@ -56,7 +36,7 @@
             <ion-row class="row-container">
                 <ion-col class="ion-align-self-left">
                     <div class="total-container">
-                        <h2>Total : 50€</h2>
+                        <h2 *ngIf="panier">Total : {{ panier.totalPrice }}€</h2>
                         <ion-button class="valider-button">Valider</ion-button>
                     </div>
                 </ion-col>
