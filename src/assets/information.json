@@ -3,7 +3,7 @@
         "id":1,
         "name":"DeLaBrise",
         "categorie":"Bateaux",
-        "description":"Qu/'il est chaud le soleil /br Quand nous sommes en vacances /br Y'a d'la joie, des hirondelles /br C/'est le sud de la France /br Papa bricole au garage /br Maman lit dans la chaise longue /br Dans ce joli paysage /br Moi, je me balade en tongs",
+        "description":"Qu'il est chaud le soleil  Quand nous sommes en vacances  Y'a d'la joie, des hirondelles  C'est le sud de la France  Papa bricole au garage  Maman lit dans la chaise longue  Dans ce joli paysage  Moi, je me balade en tongs",
         "image":"Brise.jpg"
 
     },
@@ -11,7 +11,7 @@
         "id":2,
         "name":"Corto-Maltesse",
         "categorie":"Bateaux",
-        "description":"Qu/'il est chaud le soleil /br Quand nous sommes en vacances /br Y'a d'la joie, des hirondelles /br C/'est le sud de la France /br Papa bricole au garage /br Maman lit dans la chaise longue /br Dans ce joli paysage /br Moi, je me balade en tongs",
+        "description":"Qu'il est chaud le soleil  Quand nous sommes en vacances  Y'a d'la joie, des hirondelles  C'est le sud de la France  Papa bricole au garage  Maman lit dans la chaise longue  Dans ce joli paysage  Moi, je me balade en tongs",
         "image":"CortoMaltesse.jpg"
 
     },
@@ -19,7 +19,7 @@
         "id":3,
         "name":"Saphir",
         "categorie":"Bateaux",
-        "description":"Qu/'il est chaud le soleil /br Quand nous sommes en vacances /br Y'a d'la joie, des hirondelles /br C/'est le sud de la France /br Papa bricole au garage /br Maman lit dans la chaise longue /br Dans ce joli paysage /br Moi, je me balade en tongs",
+        "description":"Qu'il est chaud le soleil  Quand nous sommes en vacances  Y'a d'la joie, des hirondelles  C'est le sud de la France  Papa bricole au garage  Maman lit dans la chaise longue  Dans ce joli paysage  Moi, je me balade en tongs",
         "image":"Saphir.jpg"
 
     },
@@ -27,56 +27,56 @@
         "id":4,
         "name":"Bistrot des Gascons",
         "categorie":"Restaurants",
-        "description":"Qu/'il est chaud le soleil /br Quand nous sommes en vacances /br Y'a d'la joie, des hirondelles /br C/'est le sud de la France /br Papa bricole au garage /br Maman lit dans la chaise longue /br Dans ce joli paysage /br Moi, je me balade en tongs",
+        "description":"Qu'il est chaud le soleil  Quand nous sommes en vacances  Y'a d'la joie, des hirondelles  C'est le sud de la France  Papa bricole au garage  Maman lit dans la chaise longue  Dans ce joli paysage  Moi, je me balade en tongs",
         "image":"BistrotDesGascons.PNG"
     },
     {
         "id":5,
-        "name":"Les Fous de L/'île",
+        "name":"Les Fous de L'île",
         "categorie":"Restaurants",
-        "description":"Qu/'il est chaud le soleil /br Quand nous sommes en vacances /br Y'a d'la joie, des hirondelles /br C/'est le sud de la France /br Papa bricole au garage /br Maman lit dans la chaise longue /br Dans ce joli paysage /br Moi, je me balade en tongs",
+        "description":"Qu'il est chaud le soleil  Quand nous sommes en vacances  Y'a d'la joie, des hirondelles  C'est le sud de la France  Papa bricole au garage  Maman lit dans la chaise longue  Dans ce joli paysage  Moi, je me balade en tongs",
         "image":"LesFousDeLIle.PNG"
     },
     {
         "id":6,
         "name":"Bistrot Landais",
         "categorie":"Restaurants",
-        "description":"Qu/'il est chaud le soleil /br Quand nous sommes en vacances /br Y'a d'la joie, des hirondelles /br C/'est le sud de la France /br Papa bricole au garage /br Maman lit dans la chaise longue /br Dans ce joli paysage /br Moi, je me balade en tongs",
+        "description":"Qu'il est chaud le soleil  Quand nous sommes en vacances  Y'a d'la joie, des hirondelles  C'est le sud de la France  Papa bricole au garage  Maman lit dans la chaise longue  Dans ce joli paysage  Moi, je me balade en tongs",
         "image":"BistrotLandais.PNG"
     },
     {
         "id":7,
         "name":"Villa 9-Trois",
         "categorie":"Restaurants",
-        "description":"Qu/'il est chaud le soleil /br Quand nous sommes en vacances /br Y'a d'la joie, des hirondelles /br C/'est le sud de la France /br Papa bricole au garage /br Maman lit dans la chaise longue /br Dans ce joli paysage /br Moi, je me balade en tongs",
+        "description":"Qu'il est chaud le soleil  Quand nous sommes en vacances  Y'a d'la joie, des hirondelles  C'est le sud de la France  Papa bricole au garage  Maman lit dans la chaise longue  Dans ce joli paysage  Moi, je me balade en tongs",
         "image":"Villa9Trois.PNG"
     },
     {
         "id":8,
         "name":"Bistrot du Sommelier",
         "categorie":"Restaurants",
-        "description":"Qu/'il est chaud le soleil /br Quand nous sommes en vacances /br Y'a d'la joie, des hirondelles /br C/'est le sud de la France /br Papa bricole au garage /br Maman lit dans la chaise longue /br Dans ce joli paysage /br Moi, je me balade en tongs",
+        "description":"Qu'il est chaud le soleil  Quand nous sommes en vacances  Y'a d'la joie, des hirondelles  C'est le sud de la France  Papa bricole au garage  Maman lit dans la chaise longue  Dans ce joli paysage  Moi, je me balade en tongs",
         "image":"BistrotDuSommelier.PNG"
     },
     {
         "id":9,
         "name":"Homard en chaud-froid",
         "categorie":"Recettes",
-        "description":"Faites cuire les homards dans de l'eau bouillante avec du thym, du laurier,du sel et du poivre de Cayenne. /br Laissez cuire 20 min. /br Egouttez-les et laissez les refroidir. /br Découpez les coffres des homards dans le sens de la longueur. /br Mélangez la mayonnaise avec le cognac, le corail et la ciboulette ciselée.",
+        "description":"Faites cuire les homards dans de l'eau bouillante avec du thym, du laurier,du sel et du poivre de Cayenne.  Laissez cuire 20 min.  Egouttez-les et laissez les refroidir.  Découpez les coffres des homards dans le sens de la longueur.  Mélangez la mayonnaise avec le cognac, le corail et la ciboulette ciselée.",
         "image":"HomardEnChaudFroid.PNG"
     },
     {
         "id":10,
         "name":"Bar rôti au laurier frais",
         "categorie":"Recettes",
-        "description":"Sur une plaque ou un plat allant au four, disposer quelques feuilles de laurier frais, verser un filet d'huile d'olive et du gros sel. /br Disposer le bar, puis l'arroser d'un filet d'huile d'olive et mettre un peu de gros sel sur la peau. /br Cuire au four pendant 12 min à 240°C.",
+        "description":"Sur une plaque ou un plat allant au four, disposer quelques feuilles de laurier frais, verser un filet d'huile d'olive et du gros sel.  Disposer le bar, puis l'arroser d'un filet d'huile d'olive et mettre un peu de gros sel sur la peau.  Cuire au four pendant 12 min à 240°C.",
         "image":"BarRotiAuLaurierFrais.PNG"
     },
     {
         "id":11,
         "name":"Noix de Saint-Jacques flambées au cognac",
         "categorie":"Recettes",
-        "description":"Faire fondre du beurre avec des échalote puis ajouter les noix de Saint-Jacques. /br Les faire revenir en laissant le milieu translucide puis les retirer du feu. /br Ajouter l/'ail et le persil dans une poêle et laisser cuire quelque secondes. /br Bien faire chauffer la poêle, puis flamber au Cognac. /br Une fois la flamme éteinte, ajouter les nois de Saint-Jacques. /br Il ne faut pas les flamber car elles perdraient leur saveur ! /br Déguster chaud nature ou accompagné d'une fondue de poireaux.",
+        "description":"Faire fondre du beurre avec des échalote puis ajouter les noix de Saint-Jacques.  Les faire revenir en laissant le milieu translucide puis les retirer du feu.  Ajouter l'ail et le persil dans une poêle et laisser cuire quelque secondes.  Bien faire chauffer la poêle, puis flamber au Cognac.  Une fois la flamme éteinte, ajouter les nois de Saint-Jacques.  Il ne faut pas les flamber car elles perdraient leur saveur !  Déguster chaud nature ou accompagné d'une fondue de poireaux.",
         "image":"NoixDeSaintJacquesFlambeesAuCognac.PNG"
     }
 ]

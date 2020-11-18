@@ -27,7 +27,7 @@ ion-content {
 
 .ion-text-information{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
-    font-size: 2vh;
+    font-size: 3vh;
     
 }
 
@@ -42,6 +42,15 @@ ion-card{
 
 ion-icon{
     color: var(--ion-color-secondary);
+}
+
+.media-container {
+    margin-top: 5%;
+    font-size: 40px;
+
+    .fb-button {
+        font-size: 40px;
+    }
 }
 
 // Small devices (landscape phones, 576px and up)
@@ -61,6 +70,14 @@ ion-icon{
     .logo{
         margin: 10px;
     }
+
+    .media-container {
+        font-size: 60px;
+    
+        .fb-button {
+            font-size: 60px;
+        }
+    }    
  }
 
 // Large devices (desktops, 992px and up)
