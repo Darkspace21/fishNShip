@@ -13,8 +13,10 @@ import { Product } from '../produitFolder/product.model';
 export class PanierPage {
   panier: Panier;
   quantitySelected:string[];
+  relaySelected: string[];
   constructor(public storage: Storage, public toaster: ToastController,private cdref: ChangeDetectorRef) { 
     this.quantitySelected = ["1","2","3","4","5","6","Retirer du panier"];
+    this.relaySelected = ["Villa 9-Trois", "Bistrot des Gascons", "Les fous de l'Ile", "Bistrot Landais", "Bistrot du Sommelier"];
   }
 
   ionViewWillEnter() {
@@ -85,6 +87,14 @@ export class PanierPage {
         alert("Erreur" + err);
       })
     })
+  }
+
+  relayChange(value:string){
+    if(this.panier!=null){
+      this.panier.relaySeleted = value;
+    }
+
+    
   }
 
   async getToster(){

@@ -13,11 +13,11 @@
                         </ion-col>
                         <ion-col size="7" class="ion-align-self-center">
                             <div class="col-container">
-                                <h5>{{ item.name }}</h5>
+                                <h5 class="item-name" style="color:#05067e; font-weight: bold;">{{ item.name }}</h5>
                                 <!-- <p>Quantité : {{ item.quantity }}</p> -->
-                                <div class="quantite" *ngIf="item.quantity">Quantité: {{item.quantity}}</div>
+                                <div class="quantite" style="color:#05067e;" *ngIf="item.quantity">Quantité: {{item.quantity}}</div>
                             <ion-row class="select-container">
-                                <ion-label class="text">Quantité: </ion-label>
+                                <!-- <ion-label style="color:#05067e;" class="text">Changer la quantité: </ion-label> -->
                                 <ion-select class="text" #quantitySelect [ngModel]="quantitySelect.value" (ionChange)='quantityChange(quantitySelect.value,item)'
                                             Placeholder="Sélectionner une quantité" interface="action-sheet">
                                     <ion-select-option *ngFor="let quantity of quantitySelected;" [value]="quantity">{{ quantity }}</ion-select-option>
@@ -27,9 +27,9 @@
                         </ion-col>
                         <ion-col size="3" class="ion-align-self-right">
                             <div class="col-container">
-                                    <h5>{{ item.netPrice }}€</h5>
+                                    <h5 style="color:#05067e; font-weight: bold;">{{ item.netPrice }}€</h5>
                                 <ion-row class="card-row">
-                                    <p class="text">{{ item.price }}€/{{item.unit}}</p>
+                                    <p style="color:#05067e;" class="text">{{ item.price }}€/{{item.unit}}</p>
                                 </ion-row>
                             </div>
                         </ion-col>
@@ -46,14 +46,17 @@
             <ion-row class="row-container">
                 <ion-col class="ion-align-self-left">
                     <div class="total-container">
-                        <h4 *ngIf="panier">Total : {{ panier.totalPrice }}€</h4>
+                        <h4 *ngIf="panier" style="color:#05067e;">Total : {{ panier.totalPrice }}€</h4>
                         <ion-button (click)="order()" [routerLink]=" ['/home']" class="valider-button">Valider</ion-button>
                     </div>
                 </ion-col>
                 <ion-col class="ion-align-self-right">
                     <div class="site-container">
-                        <h4>Point Relais</h4>
-                        <p>La maison du Poulet</p>
+                        <h4 style="color:#05067e;" >Point Relais</h4>
+                        <ion-select style="color:#05067e;" class="text" #relaySelect [ngModel]="relaySelect.value" (ionChange)='relayChange(relaySelect.value)'
+                                            Placeholder="Sélectionner un point relais" interface="action-sheet">
+                                    <ion-select-option *ngFor="let relay of relaySelected;" [value]="relay">{{ relay }}</ion-select-option>
+                        </ion-select>
                     </div>
                 </ion-col>
             </ion-row>
