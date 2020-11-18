@@ -4,9 +4,10 @@
 
 .btn-categorie{
     //padding-top: 1%;
-    max-height:60px;
+    width: 50%;
+    height: 40px;
     background-color: transparent !important;
-  }
+}
   .egal3{
     width:80%
   }
@@ -102,6 +103,7 @@ ion-footer {
 
 .footer-grid {
   height: 100%;
+  bottom: 0;
 }
 
 .row-container {
@@ -115,6 +117,7 @@ ion-footer {
   text-align:center;
   max-height:15%;
   margin-bottom:10%;
+  margin-top: 5%;
 }
 
 .toaster{
@@ -156,4 +159,20 @@ ion-item{
   font-size: 2vh; 
   --border-color: #05067e; 
   --ion-background-color:#e4e7f6;
+}
+
+
+// Small devices (landscape phones, 375px and up)
+@media (min-width: 375px) { 
+  .btn-categorie{
+    height: 50px;
+  }
+}
+
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+  .btn-categorie{
+    height: 80px;
+  }
 }
