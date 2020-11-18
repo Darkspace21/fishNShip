@@ -28,7 +28,6 @@ export class PanierPage {
     
   }
 
-
   quantityChange(value:string,produit:Product){
     if(value != "Supprimer")
     {
@@ -107,6 +106,10 @@ export class PanierPage {
 
   ngAfterContentChecked() {
     this.cdref.detectChanges()   
+  }
+
+  order(){
+    this.storage.clear();
   }
 
 }

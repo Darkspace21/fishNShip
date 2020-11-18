@@ -41,7 +41,7 @@
                 <ion-col class="ion-align-self-left">
                     <div class="total-container">
                         <h2 *ngIf="panier">Total : {{ panier.totalPrice }}€</h2>
-                        <ion-button class="valider-button">Valider</ion-button>
+                        <ion-button (click)="order()" [routerLink]="['/home']" class="valider-button">Valider</ion-button>
                     </div>
                 </ion-col>
                 <ion-col class="ion-align-self-right">
