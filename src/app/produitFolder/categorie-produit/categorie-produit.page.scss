@@ -63,14 +63,16 @@
   .prix-barrer{
     margin-left: 1%;
     color: var(--ion-color-primary); 
+    font-size: 2vh;
     text-decoration:line-through var(--ion-color-primary);
   }
   .prix-promotions{
     color:red;
+    font-size: 2vh;
   }
   
   img{
-    width: 50%;
+    width: 100%;
   }
   
   .ion-col_img{
@@ -120,7 +122,6 @@ ion-footer {
   font-size: 200px;
 }
 
-
 ion-list{
   width: 80%;
   margin:auto;
@@ -137,7 +138,16 @@ ion-select{
 ion-select::part(placeholder) {
   color: #05067e; opacity: 1;
   border: none;
-} 
+}
+
+
+.ion-grid_produit{
+  height: 200px;
+}
+
+.ion-grid_promotion{
+  height: 230px;
+}
 
 
 ion-item{
