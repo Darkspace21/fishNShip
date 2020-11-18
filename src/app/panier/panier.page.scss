@@ -14,15 +14,24 @@ ion-content {
     }
 }
 
+.card-row {
+    align-items: center;
+    justify-content: center;
+}
+
 .card-container {
-    width : 100%;
-    text-align:center;
+    width: 100%;
+    text-align: center;
 }
 
 .select-container {
     align-items: center;
     justify-content: center;
-    width:100%;
+    width: 100%;
+}
+
+.text {
+    font-size : 12px;
 }
 
 .price {
@@ -34,10 +43,11 @@ ion-content {
 .valider-button {
     --background: #fe881c;
     width: 100px;
+    height :25px;
 }
 
 ion-footer {
-    height: 25%;
+    height :15%;
     background-color: #e4e7f6 !important;
     display:flex;
     align-items: center;
@@ -51,15 +61,11 @@ ion-footer {
 
 .footer-grid {
     width: 100%;
-    max-height: 100%;
 }
 
 .row-container {
-    display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid;
-    border-color: #fe881c;
 }
 
 .total-container {
