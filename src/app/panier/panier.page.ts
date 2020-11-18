@@ -30,7 +30,6 @@ export class PanierPage {
 
 
   quantityChange(value:string,produit:Product){
-    console.log(value,produit);
     if(value != "Supprimer")
     {
       produit.quantity = parseFloat(value);
@@ -38,10 +37,7 @@ export class PanierPage {
     }
     else if (value === "Supprimer"){
       produit.quantity = null;
-    }
-    // this.storage.set("produit", produit)
-    // .then(value => alert("Votre commande de " + value.name + " a bien été enregistré!!!"))
-    // .catch(err => console.log(err));     
+    } 
     let added : boolean = false;
     this.storage.get("Cart").then((panier:Panier)=>{
       //Si le panier est vide
@@ -84,6 +80,7 @@ export class PanierPage {
       this.storage.set("Cart",panier)
       .then(panier=>{
         this.getToster();
+        this.panier = panier;
       })
       .catch(err=>{
         alert("Erreur" + err);

@@ -56,7 +56,7 @@
           <ion-row>
             <ion-col class="ion-col_texte">
               <div class="nom"><b>{{produit.name}}</b></div>
-              <div class="quantite" *ngIf="produit.quantity">{{produit.quantite}}</div>
+              <div class="quantite" *ngIf="produit.quantity">{{produit.quantity}}</div>
               <div class="prix">{{produit.price}}€/{{produit.unit}}</div>
               <ion-select #quantitySelect [ngModel]="quantitySelect.value" (ionChange)='quantityChange(quantitySelect.value,produit)' Placeholder="Sélectionner une quantité" interface="action-sheet">
                 <ion-select-option *ngFor="let quantity of quantitySelected;" [value]="quantity">{{ quantity }}</ion-select-option>
