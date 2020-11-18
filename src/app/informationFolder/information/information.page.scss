@@ -75,7 +75,7 @@ ion-item{
 ion-card{
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 256px;
     margin: auto;
 }
 
@@ -83,3 +83,18 @@ ion-title{
     color:var(--ion-color-primary);
     text-align: center;
 }
+
+// Medium devices (tablets, 375px and up)
+@media (min-width: 375px) { 
+    ion-card{
+        width: 300px;
+    }
+ }
+
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+    ion-card{
+        width: 400px;
+    }
+ }

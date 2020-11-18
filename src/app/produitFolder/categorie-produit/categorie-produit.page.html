@@ -7,18 +7,20 @@
   <app-crustaces *ngIf="category===1"></app-crustaces>
   <app-coquillages *ngIf="category===2"></app-coquillages>
   <app-promotions *ngIf="category==='Promotions'"></app-promotions> -->
-  <ion-title *ngIf="category === '0'">
-    Poissons
-  </ion-title>
-  <ion-title *ngIf="category === '1'">
-    Crustacés
-  </ion-title>
-  <ion-title *ngIf="category === '2'">
-    Coquillages
-  </ion-title>
-  <ion-title *ngIf="category === 'Promotions'">
-    {{category}}
-  </ion-title>
+  <div class="div_title">
+    <ion-text class="title" *ngIf="category === '0'">
+      Poissons
+    </ion-text>
+    <ion-text class="title" *ngIf="category === '1'">
+      Crustacés
+    </ion-text>
+    <ion-text class="title" *ngIf="category === '2'">
+      Coquillages
+    </ion-text>
+    <ion-text class="title" *ngIf="category === 'Promotions'">
+      {{category}}
+    </ion-text>
+  </div>
 
   <br/>
 
@@ -26,17 +28,17 @@
     <div *ngFor="let produit of produits">
     <ion-row>
         <ion-col *ngIf="produit.category === numberCategory">
-          <ion-grid>
+          <ion-grid style="background-color: chartreuse;">
             <ion-row>
               <ion-col class="ion-col_img">
-                <ion-button  (click)="addToCart(produit)" class="ion-button-produit"><img class="img" src="../../../assets/icon/bar-icone.png"></ion-button>
+                <img (click)="addToCart(produit)"  class="img" src="../../../assets/icon/bar-icone.png">
               </ion-col>
             </ion-row>
             <ion-row>
               <ion-col class="ion-col_texte">
                 <div class="nom"><b>{{produit.name}}</b></div>
                 <div class="quantite" *ngIf="produit.quantity">{{produit.quantite}}</div>
-                <div class="prix">{{produit.price}}€/unité</div>
+                <div class="prix">{{produit.price}}€/{{produit.unit}}</div>
                 <ion-select #quantitySelect [ngModel]="quantitySelect.value" (ionChange)='quantityChange(quantitySelect.value,produit)' Placeholder="Sélectionner une quantité" interface="action-sheet">
                   <ion-select-option *ngFor="let quantity of quantitySelected;" [value]="quantity">{{ quantity }}</ion-select-option>
                 </ion-select>
@@ -48,7 +50,7 @@
           <ion-grid>
             <ion-row>
               <ion-col class="ion-col_img">
-                <img class="img" src="../../../assets/icon/bar-icone.png">
+                <img class="img" src="../../../assets/icon/{{ produit.image }}">
               </ion-col>
             </ion-row>
             <ion-row>

@@ -19,7 +19,13 @@
   .background{
     background-color: #e4e7f6;
   }
-  ion-title {
+
+  .div_title{
+    text-align: center;
+    width: 100%;
+  }
+
+  .title {
     margin-top:5%;
     font-size: 35px;
     text-align:center;
@@ -41,13 +47,16 @@
   }
   .nom{
     margin-left: 1%;
+    font-size: 2vh;
   }
   .quantite{
     margin-left: 1%;
+    font-size: 2vh;
   }
   
   .prix{
     margin-left: 1%;
+    font-size: 2vh;
     /*text-decoration:line-through blue;*/
   }
   
@@ -109,4 +118,36 @@ ion-footer {
 .toaster{
   text-align: center;
   font-size: 200px;
+}
+
+
+ion-list{
+  width: 80%;
+  margin:auto;
+  padding: 0px;
+}
+
+ion-select{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 2vh;
+  font-style: italic;
+  justify-content: center;
+}
+
+ion-select::part(placeholder) {
+  color: #05067e; opacity: 1;
+  border: none;
+} 
+
+
+ion-item{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color:#05067e; 
+  font-size: 2vh; 
+  --border-color: #05067e; 
+  --ion-background-color:#e4e7f6;
+}
+
+.ion-button-produit{
+
 }

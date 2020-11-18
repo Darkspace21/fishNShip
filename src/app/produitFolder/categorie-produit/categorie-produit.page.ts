@@ -46,6 +46,7 @@ export class CategorieProduitPage implements OnInit {
 
   addToCart(produit:Product){
     console.log(produit); 
+    this.getCommentToster(produit);
   }
 
   quantityChange(value:string,produit:Product){
@@ -121,6 +122,23 @@ export class CategorieProduitPage implements OnInit {
       ],
       position:"top",
       color:"success",
+      cssClass:"text-align:center"  
+    });
+    toast.present();
+  }
+
+  async getCommentToster(produit:Product){
+    const toast = await this.toaster.create({
+      message: produit.comments,
+      duration:1500,
+      buttons:[
+        {
+          text: 'X',
+          role:'cancel'
+        }
+      ],
+      position:"top",
+      color:"tertiary",
       cssClass:"text-align:center"  
     });
     toast.present();
