@@ -8,18 +8,20 @@
             <ion-card class="card-container" *ngIf="item.quantity">
                 <ion-grid class="card-grid">
                     <ion-row class="card-row">
-                        <ion-col class="ion-align-self-left">
+                        <ion-col size="7" class="ion-align-self-left">
                             <div class="col-container">
                                 <h3>{{ item.name }}</h3>
                                 <!-- <p>Quantité : {{ item.quantity }}</p> -->
+                            <ion-row class="select-container">
                                 <ion-label>Quantité: </ion-label>
-                                <ion-select #quantitySelect [ngModel]="quantitySelect.value" (ionChange)='quantityChange(quantitySelect.value,item)' 
-                                Placeholder="Sélectionner une quantité" interface="action-sheet">
+                                <ion-select #quantitySelect [ngModel]="quantitySelect.value" (ionChange)='quantityChange(quantitySelect.value,item)'
+                                            Placeholder="Sélectionner une quantité" interface="action-sheet">
                                     <ion-select-option *ngFor="let quantity of quantitySelected;" [value]="quantity">{{ quantity }}</ion-select-option>
-                                  </ion-select>
+                                </ion-select>
+                            </ion-row>
                             </div>
                         </ion-col>
-                        <ion-col class="ion-align-self-right">
+                        <ion-col size="5" class="ion-align-self-right">
                             <div class="col-container">
                                 <h3>{{ item.netPrice }}€</h3>
                                 <p>{{ item.price }}€/{{item.unit}}</p>
@@ -31,9 +33,6 @@
         </ion-item>
     </ion-list>
     <div class="container ion-float-right">
-        <ion-label class="price">Prix Total</ion-label>
-        <br />
-        
     </div>
 </ion-content>
 <ion-footer class="ion-no-border">
@@ -47,7 +46,7 @@
                 </ion-col>
                 <ion-col class="ion-align-self-right">
                     <div class="site-container">
-                        <h5>Point Relais</h5>
+                        <h2>Point Relais</h2>
                         <p>La maison du Poulet</p>
                     </div>
                 </ion-col>

@@ -19,6 +19,12 @@ ion-content {
     text-align:center;
 }
 
+.select-container {
+    align-items: center;
+    justify-content: center;
+    width:100%;
+}
+
 .price {
     padding: 10px;
     color: white;
@@ -27,12 +33,15 @@ ion-content {
 
 .valider-button {
     --background: #fe881c;
-    width: 150px;
+    width: 100px;
 }
 
 ion-footer {
-    height: 20%;
-    background-color: var(--ion-color-primary);
+    height: 25%;
+    background-color: #e4e7f6 !important;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .total-container {
@@ -41,14 +50,16 @@ ion-footer {
 
 
 .footer-grid {
-    width:100%;
-    max-height:12%;
+    width: 100%;
+    max-height: 100%;
 }
 
 .row-container {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 2px solid;
+    border-color: #fe881c;
 }
 
 .total-container {
