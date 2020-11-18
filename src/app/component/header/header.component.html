@@ -1,7 +1,17 @@
 <ion-toolbar>
     <ion-buttons>
-        <ion-menu-button class="menu-button" menu="first"></ion-menu-button>
-        <div class="div_title"><img alt="logo" class="img_header" src="../../assets/images/BT_Logo.png" />Le Bateau de Thibault</div>
-        <ion-button [routerLink]="['/panier']" class="panier-button"><ion-icon slot="icon-only" class="icon-cart" name="cart-outline"></ion-icon></ion-button>
+        <ion-grid>
+            <ion-row>
+                <ion-col size="1">
+                    <ion-menu-button class="menu-button" menu="first"></ion-menu-button>
+                </ion-col>
+                <ion-col size ="10" class="col-title">
+                  <img alt="logo" class="img_header" src="../../assets/images/BT_Logo.png" /><img *ngIf="!isHomeRoute()" class="title" src="../../assets/svg/Titre.svg" />
+                </ion-col>
+                <ion-col size="1">
+                    <ion-button [routerLink]="['/panier']" class="panier-button"><ion-icon slot="icon-only" class="icon-cart" name="cart-outline"></ion-icon></ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
     </ion-buttons>
 </ion-toolbar>
