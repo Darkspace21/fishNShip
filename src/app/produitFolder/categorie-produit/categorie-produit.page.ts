@@ -44,22 +44,6 @@ export class CategorieProduitPage implements OnInit {
 
   }
 
-  // async ionViewWillEnter() {
-  //   console.log("CartPage");
-  //   await this.storage.get("Cart").then((data: Panier)=>{
-  //     for(let i = 0; i < this.produits.length;i++){
-  //       for(let j = 0; j < data.products.length;j++){
-  //         if(this.produits[i].id === data.products[j].id){
-  //           this.produits[i].quantity = data.products[j].quantity;
-  //         }
-  //       }
-  //     }
-  //   })
-  //   .catch(err=>{
-  //     console.log("Erreur",err);
-  //   }) 
-  // }
-
   addToCart(produit: Product) {
     console.log(produit);
     this.getCommentToster(produit);
@@ -177,6 +161,8 @@ export class CategorieProduitPage implements OnInit {
           for (let j = 0; j < data.products.length; j++) {
             if (this.produits[i].id === data.products[j].id) {
               this.produits[i].quantity = data.products[j].quantity;
+            }else{
+              this.produits[i].quantity = 0;
             }
           }
         }
