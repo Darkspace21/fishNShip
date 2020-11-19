@@ -29,7 +29,13 @@
                             <div class="col-container">
                                     <h5 style="color:#05067e; font-weight: bold;">{{ item.netPrice }}€</h5>
                                 <ion-row class="card-row">
-                                    <p style="color:#05067e;" class="text">{{ item.price }}€/{{item.unit}}</p>
+                                    <div *ngIf="item.discount > 0;else elseBlock">
+                                        <p class="text" style="text-decoration: line-through #05067e;color:#05067e">{{ item.price }}€/{{item.unit}}</p>
+                                        <p style="color:red;" class="text">{{ item.discount }}€/{{item.unit}}</p>
+                                    </div>
+                                    <ng-template #elseBlock>
+                                        <p style="color:#05067e;" class="text">{{ item.price }}€/{{item.unit}}</p>
+                                    </ng-template>
                                 </ion-row>
                             </div>
                         </ion-col>

@@ -34,7 +34,11 @@ export class PanierPage {
     if(value != "Retirer du panier")
     {
       produit.quantity = parseFloat(value);
-      produit.netPrice = produit.quantity * produit.price;
+      if(produit.discount > 0){
+        produit.netPrice = produit.quantity * produit.discount;
+      }else{
+        produit.netPrice = produit.quantity * produit.price;
+      }
     }
     else if (value === "Retirer du panier"){
       produit.quantity = null;
@@ -61,14 +65,22 @@ export class PanierPage {
             }else{
               //met à jour l'item si il existe deja dans le panier
               element.quantity = produit.quantity;
-              element.netPrice = produit.quantity * element.price;
+              if(element.discount > 0){
+                element.netPrice = produit.quantity * element.discount;
+              }else{
+                element.netPrice = produit.quantity * element.price;
+              }
               added = true;
             }   
           }
         }
         if(!added){
           //le panier n'est pas vide et ne contient pas l'article
-          produit.netPrice = produit.quantity * produit.price
+          if(produit.discount >0){
+            produit.netPrice = produit.quantity * produit.discount;
+          }else{
+            produit.netPrice = produit.quantity * produit.price;
+          }
           panier.products.push(produit); 
         }
 
