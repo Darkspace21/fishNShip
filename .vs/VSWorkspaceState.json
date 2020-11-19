@@ -3,8 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\theme"
+    "\\src\\app\\component",
+    "\\src\\app\\component\\header",
+    "\\src\\app\\home",
+    "\\src\\app\\panier",
+    "\\src\\app\\produitFolder",
+    "\\src\\app\\produitFolder\\categorie-produit",
+    "\\src\\assets\\images"
   ],
-  "SelectedNode": "\\src\\app\\app.module.ts",
+  "SelectedNode": "\\src\\app\\component\\header\\header.component.ts",
   "PreviewInSolutionExplorer": false
 }
